@@ -30,7 +30,7 @@
 
           if (!empty($params) && is_array($params)) {
               foreach ($params as $key => $value) {
-                  $stmt->bindValue($key, $value, PDO::PARAM_STR);
+                $stmt->bindValue($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
               }
           }
 
@@ -53,7 +53,7 @@
 
           if (!empty($params) && is_array($params)) {
               foreach ($params as $key => $value) {
-                  $stmt->bindValue($key, $value, PDO::PARAM_STR);
+                $stmt->bindValue($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
               }
           }
 
@@ -77,7 +77,7 @@
 
           if (!empty($params) && is_array($params)) {
               foreach ($params as $key => $value) {
-                  $stmt->bindValue($key, $value, PDO::PARAM_STR);
+                $stmt->bindValue($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
               }
           }
 
