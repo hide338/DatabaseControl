@@ -83,7 +83,7 @@
 
           $result = $stmt->execute();
   
-          return $result;  // 影響を受けた行数を返す
+          return $result;
 
         } catch (Exception $e) {
             $this->handleError($e);
